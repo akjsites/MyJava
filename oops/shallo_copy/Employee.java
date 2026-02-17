@@ -1,4 +1,4 @@
-package com.aswini.shallo_copy;
+package shallo_copy;
 
 public class Employee {
 private String name;

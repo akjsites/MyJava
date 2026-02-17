@@ -1,4 +1,4 @@
-package com.aswini.shallo_copy;
+package shallo_copy;
 class shallo{
 	double price;
 

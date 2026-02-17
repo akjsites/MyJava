@@ -1,4 +1,4 @@
-package com.aswini.passby_value;
+package passby_value;
 
 import java.util.Scanner;
 

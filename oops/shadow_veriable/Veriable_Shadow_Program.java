@@ -1,4 +1,4 @@
-package com.aswini.shadow_veriable;
+package shadow_veriable;
 
 public class Veriable_Shadow_Program {
 

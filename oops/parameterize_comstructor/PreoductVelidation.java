@@ -1,4 +1,4 @@
-package com.aswini.parameterize_comstructor;
+package parameterize_comstructor;
 
 public class PreoductVelidation {
 

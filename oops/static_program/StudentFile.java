@@ -1,4 +1,4 @@
-package com.aswini.static_program;
+package static_program;
 
 public class StudentFile {
 int studentroll;

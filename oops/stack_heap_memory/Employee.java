@@ -1,4 +1,4 @@
-package com.aswini.stack_heap_memory;
+package stack_heap_memory;
 
 public class Employee {
 	int id=100;

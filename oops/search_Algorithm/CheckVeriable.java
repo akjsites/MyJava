@@ -1,4 +1,4 @@
-package com.aswini.search_Algorithm;
+package search_Algorithm;
 
 public class CheckVeriable {
     static int a=10;
