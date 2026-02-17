@@ -1,4 +1,4 @@
-package com.aswini.oopsblc;
+package oopsblc;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package com.aswini.data_hiding;
+package data_hiding;
 
 import java.util.Scanner;
 

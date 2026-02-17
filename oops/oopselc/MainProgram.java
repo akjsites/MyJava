@@ -1,4 +1,4 @@
-package com.aswini.oopselc;
+package oopselc;
 
 public class MainProgram {
 

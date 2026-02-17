@@ -1,4 +1,4 @@
-package com.aswini.encapsulation;
+package encapsulation;
 
 public class StudentGetSet {
 

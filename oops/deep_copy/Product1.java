@@ -1,4 +1,4 @@
-package com.aswini.deep_copy;
+package deep_copy;
 public class Product1 {
 private int productId;
 private String productName;

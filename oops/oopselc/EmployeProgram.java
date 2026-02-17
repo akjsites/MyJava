@@ -1,4 +1,4 @@
-package com.aswini.oopselc;
+package oopselc;
 
 import java.util.Scanner;
 

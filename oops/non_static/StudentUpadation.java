@@ -1,4 +1,4 @@
-package com.aswini.non_static;
+package non_static;
 
 import java.util.Scanner;
 

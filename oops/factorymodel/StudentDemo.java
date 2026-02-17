@@ -1,4 +1,4 @@
-package com.aswini.factorymodel;
+package factorymodel;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package com.aswini.constructor;
+package constructor;
 
 public class Student {
   

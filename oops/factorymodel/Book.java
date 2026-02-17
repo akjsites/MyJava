@@ -1,4 +1,4 @@
-package com.aswini.factorymodel;
+package factorymodel;
 
 public class Book {
 	private int id;

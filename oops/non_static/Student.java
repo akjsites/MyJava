@@ -1,4 +1,4 @@
-package com.aswini.non_static;
+package non_static;
 
 public class Student {
 	int studentId ;

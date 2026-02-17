@@ -1,5 +1,5 @@
 
-package com.aswini.deep_copy;
+package deep_copy;
 
 public class ProductClass {
 

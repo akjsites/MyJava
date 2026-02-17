@@ -1,4 +1,4 @@
-package com.aswini.oopsblc;
+package oopsblc;
 
 public class Product {
 int	productId ;
