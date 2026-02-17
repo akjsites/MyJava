@@ -1,0 +1,85 @@
+🏦 OOPs Scenario Question
+
+Scenario:
+
+Design a Banking Management System using all OOP principles.
+
+Requirements:
+
+Abstraction
+
+Create an abstract class BankAccount with:
+
+Private fields → accountNo, holderName, balance (Data Hiding).
+
+Constructor to initialize details (Constructor).
+
+Getter/Setter methods (Encapsulation).
+
+Abstract methods:
+
+deposit(double amount)
+
+withdraw(double amount)
+
+Inheritance
+
+Create subclasses:
+
+SavingsAccount → extra field interestRate.
+
+CurrentAccount → extra field overdraftLimit.
+
+Both must extend BankAccount.
+
+Polymorphism
+
+Override methods deposit() and withdraw() differently:
+
+SavingsAccount → doesn’t allow balance below zero.
+
+CurrentAccount → allows overdraft up to a limit.
+
+Use method overriding to achieve polymorphism.
+
+Encapsulation + Data Hiding
+
+Keep all fields private.
+
+Access them only through getters/setters.
+
+Constructor
+
+Use constructors to set initial account values in BankAccount, SavingsAccount, and CurrentAccount.
+
+BankDemo (Main Class)
+
+Create objects using polymorphism:
+
+BankAccount acc1 = new SavingsAccount(...);
+BankAccount acc2 = new CurrentAccount(...);
+
+
+Perform deposits, withdrawals, and print account details.
+
+Show how polymorphism executes the correct version of withdraw()/deposit().
+
+🔑 Hints (Not Code, Just Guidance)
+
+Think of BankAccount like a blueprint (you cannot open a generic account, must be Savings or Current).
+
+Encapsulation = private fields with getters/setters.
+
+Data Hiding = user cannot directly change balance.
+
+Constructor = when you open an account, you must provide details.
+
+Inheritance = Savings and Current accounts inherit from BankAccount.
+
+Polymorphism = withdraw() behaves differently depending on object type.
+
+Abstraction = force every account type to implement deposit() and withdraw().
+
+📌 Final Assignment Question
+
+👉 "Create a Banking System using OOPs where BankAccount is an abstract class with private fields and constructors, SavingsAccount and CurrentAccount are subclasses, and deposit/withdraw work differently. Demonstrate Encapsulation, Data Hiding, Inheritance, Polymorphism, Constructor, and Abstraction in one program with a BankDemo class."

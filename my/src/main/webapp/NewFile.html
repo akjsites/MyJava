@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+      <h1>NewFile</h1>
+      <input type="text"  id="show1">
+      <div id="show">h</div>
+      <script >
+         document.getElementById("show").addEventListener("click", function() {
+             const x=document.createElement("img");
+             x.src=document.getElementById("show1").value;
+             document.getElementById("show").appendChild(x);
+         });
+      </script>
+</body>
+</html>

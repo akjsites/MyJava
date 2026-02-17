@@ -1,0 +1,119 @@
+🚦 Scenario 1: Traffic Flow Simulation (Industry-Style)
+Scenario
+
+You are tasked to simulate city traffic at a single intersection. The simulation must handle:
+
+Multiple vehicles of different types.
+
+A traffic light system that controls when vehicles move.
+
+Rules: Vehicles stop at red, wait at yellow, move at green.
+
+Your simulation should run for multiple time steps and print the status of each vehicle at each step.
+
+Requirements
+
+Abstract Class – Vehicle
+
+Private fields: id, speed, position.
+
+Constructor initializes id and speed.
+
+Methods:
+
+move() → update position if allowed.
+
+stop() → set speed = 0.
+
+displayStatus() → show VehicleType, ID, Position.
+
+Subclasses
+
+Car (default speed = 10 units/step).
+
+Bus (default speed = 5 units/step).
+
+Bike (default speed = 7 units/step).
+
+TrafficLight
+
+Enum LightState { RED, YELLOW, GREEN }.
+
+Field: currentState.
+
+Method: changeState() → rotate states.
+
+Simulation
+
+Holds list of vehicles and one traffic light.
+
+Runs for n time steps.
+
+At each step:
+
+Print traffic light state.
+
+For each vehicle: decide move/stop.
+
+Print vehicle status.
+
+Hints
+
+Use Polymorphism → Car, Bus, Bike extend Vehicle.
+
+Use Encapsulation → private fields + getters/setters.
+
+Use Abstraction → Vehicle is abstract.
+
+Use Inheritance → Car, Bus, Bike.
+
+Use Enum for TrafficLight state.
+
+Sample Test Cases
+✅ Test Case 1: Single Car with RED Light
+TrafficLight light = new TrafficLight(LightState.RED);
+Car c1 = new Car(1);
+c1.move(light);
+
+
+Expected Output:
+Car 1 stopped at position 0 (RED Light)
+
+✅ Test Case 2: Car Moving on GREEN Light
+light.changeState(LightState.GREEN);
+c1.move(light);
+
+
+Expected Output:
+Car 1 moved to position 10
+
+✅ Test Case 3: Multiple Vehicles, Simulation for 5 Steps
+Simulation sim = new Simulation(light);
+sim.addVehicle(new Car(1));
+sim.addVehicle(new Bus(2));
+sim.addVehicle(new Bike(3));
+sim.run(5);
+
+
+Expected Output (sample):
+
+Step 1 → Light: GREEN
+Car 1 moved to position 10
+Bus 2 moved to position 5
+Bike 3 moved to position 7
+
+Step 2 → Light: GREEN
+Car 1 moved to position 20
+Bus 2 moved to position 10
+Bike 3 moved to position 14
+
+Step 3 → Light: YELLOW
+Car 1 stopped at position 20
+Bus 2 stopped at position 10
+Bike 3 stopped at position 14
+
+Step 4 → Light: RED
+All vehicles stopped.
+
+Step 5 → Light: GREEN
+Vehicles continue moving...

@@ -1,0 +1,147 @@
+Assignment: Employee Management System for a Consulting Firm
+Scenario:
+You are building a module for an HR system at a consulting firm. The firm has different types of employees, primarily FullTimeEmployee and Contractor. Each type has a different way of calculating their salary and benefits.
+
+Coding Requirements:
+
+1. Abstract Class: Employee
+
+Attributes (all private):
+
+employeeId: String
+
+name: String
+
+email: String
+
+Constructor: Parameterized constructor to initialize all fields. Validate that: employeeId and name are not null or empty, and email contains the '@' symbol.
+
+Methods:
+
+public abstract double calculateSalary();
+
+public abstract String getBenefits();
+
+Getters for all fields.
+
+toString() method to print basic employee details.
+
+2. Concrete Class: FullTimeEmployee (extends Employee)
+
+Additional Attribute (private):
+
+monthlySalary: double
+
+Constructor: Parameterized constructor to initialize all fields (including parent's). Validate monthlySalary is positive.
+
+Methods (Override):
+
+calculateSalary(): Returns the monthlySalary.
+
+getBenefits(): Returns a String description: "Health Insurance, Paid Leave, Retirement Plan".
+
+3. Concrete Class: Contractor (extends Employee)
+
+Additional Attributes (private):
+
+hourlyRate: double
+
+hoursWorked: int
+
+Constructor: Parameterized constructor to initialize all fields. Validate hourlyRate is positive and hoursWorked is non-negative.
+
+Methods (Override):
+
+calculateSalary(): Returns the product of hourlyRate and hoursWorked.
+
+getBenefits(): Returns a String: "No standard benefits".
+
+4. Execution Class: HRSystem
+
+In the main method, display a menu:
+
+text
+Select Employee Type:
+1. Full-Time Employee
+2. Contractor
+Use a Scanner and switch statement to capture the user's choice.
+
+Based on the choice, prompt the user for all necessary details to create either a FullTimeEmployee or a Contractor object.
+
+After creating the object, display the employee's details, their calculated salary, and their benefits.
+
+Test Cases for Output & Input Validation
+Test Case 1: Happy Path - Full-Time Employee
+
+text
+Select Employee Type:
+1. Full-Time Employee
+2. Contractor
+1
+Enter Employee ID: FTE101
+Enter Name: Alice Smith
+Enter Email: alice.smith@firm.com
+Enter Monthly Salary: 75000
+--- Employee Details ---
+ID: FTE101, Name: Alice Smith, Email: alice.smith@firm.com
+Type: Full-Time
+Calculated Salary: $75000.0
+Benefits: Health Insurance, Paid Leave, Retirement Plan
+Test Case 2: Happy Path - Contractor
+
+text
+Select Employee Type:
+1. Full-Time Employee
+2. Contractor
+2
+Enter Employee ID: CONT202
+Enter Name: Bob Johnson
+Enter Email: bob.j@firm.com
+Enter Hourly Rate: 45.50
+Enter Hours Worked: 80
+--- Employee Details ---
+ID: CONT202, Name: Bob Johnson, Email: bob.j@firm.com
+Type: Contractor
+Calculated Salary: $3640.0
+Benefits: No standard benefits
+Test Case 3: Input Validation - Invalid Email
+
+text
+Select Employee Type:
+1. Full-Time Employee
+2. Contractor
+1
+Enter Employee ID: FTE103
+Enter Name: Charlie Brown
+Enter Email: charlie.brown
+Invalid email address. Must contain '@'.
+Test Case 4: Input Validation - Negative Salary
+
+text
+Select Employee Type:
+1. Full-Time Employee
+2. Contractor
+1
+Enter Employee ID: FTE104
+Enter Name: Diana Prince
+Enter Email: diana@firm.com
+Enter Monthly Salary: -5000
+Salary must be a positive value.
+Test Case 5: Input Validation - Empty Name
+
+text
+Select Employee Type:
+1. Full-Time Employee
+2. Contractor
+2
+Enter Employee ID: CONT205
+Enter Name: 
+Employee name cannot be empty.
+
+
+
+
+
+
+
+https://chat.deepseek.com/a/chat/s/84938b19-5c07-4c5b-b9e1-b316a83f6211
